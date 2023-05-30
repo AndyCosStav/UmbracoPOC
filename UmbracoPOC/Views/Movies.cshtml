@@ -1,0 +1,19 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<UmbracoPOC.Models.MovieViewModel>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+
+}
+
+
+@foreach (var movie in Model.Movies)
+{
+    <p>@Model.Value("intro")</p>
+	<p>@movie.Title</p>
+	<p>@movie.Description</p>
+	<p>@movie.Rating</p>
+	
+	@Model.Value("image")
+}
+
